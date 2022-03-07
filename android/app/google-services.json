@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "395981298050",
+    "project_id": "tesr2-7a717",
+    "storage_bucket": "tesr2-7a717.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395981298050:android:ed6b4e66c79e19d8c2d79b",
+        "android_client_info": {
+          "package_name": "com.example.mylibarary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395981298050-artndkkgml7sueei173htraif2lcu5th.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcVR_oFhm36qQOh2mA0q9MfNX4aM025jA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395981298050-artndkkgml7sueei173htraif2lcu5th.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
