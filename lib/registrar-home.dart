@@ -17,7 +17,7 @@ class RegistrarHome extends StatefulWidget {
 
 class _RegistrarHomeState extends State<RegistrarHome> {
    Future<List<Registrar>>getRegistrar() async {
-    final String _url='http://192.168.171.189:8000/api/getregistrar';
+    final String _url='http://192.168.209.189:8000/api/getregistrar';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 List<Registrar> users=[];
@@ -30,7 +30,7 @@ print(users.toString());
 return users;
   }
     Future<List<Patient>>getPatient() async {
-    final String _url='http://192.168.171.189:8000/api/allpatient';
+    final String _url='http://192.168.209.189:8000/api/allpatient';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 List<Patient> users=[];
@@ -92,7 +92,7 @@ return Container(
   
                radius: 90,
   
-               backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)),
+               backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)),
   
              ),
   
@@ -262,7 +262,7 @@ child: Icon(Icons.search,color: Colors.teal,),
   
                       radius: 90,
   
-                  backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)
+                  backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)
 
                     ),
 

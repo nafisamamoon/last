@@ -172,7 +172,7 @@ Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RegistrarProfil
   return Center(
     child: Stack(children: [
   CircleAvatar(radius: 80,
-  backgroundImage: _imageFile == null ?  CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+widget.path!): FileImage(File(_imageFile!.path)) as ImageProvider,
+  backgroundImage: _imageFile == null ?  CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+widget.path!): FileImage(File(_imageFile!.path)) as ImageProvider,
   ),
   Positioned(child: InkWell(
     onTap: (){
@@ -222,7 +222,7 @@ void takePhoto(ImageSource source)async{
 }
 Future<http.StreamedResponse> patchImage()async{
   
- var url='http://192.168.171.189:8000/api/edit-emergency/$uid';
+ var url='http://192.168.209.189:8000/api/edit-emergency/$uid';
  var request=http.MultipartRequest('POST',Uri.parse(url));
  request.files.add(await http.MultipartFile.fromPath("path",_imageFile!.path));
  //request.files.add(await http.MultipartFile.fromPath("path",_imageFile== null?CachedNetworkImageProvider('http://192.168.2.189:8000/uploads/'+widget.path!) as String  :_imageFile!.path) );
@@ -247,7 +247,7 @@ var response=await request.send();
 return response;
 }
  Future<http.StreamedResponse> edit()async{
- var url='http://192.168.171.189:8000/api/edit-emergencydata/$uid';
+ var url='http://192.168.209.189:8000/api/edit-emergencydata/$uid';
  var request=http.MultipartRequest('POST',Uri.parse(url));
  request.fields.addAll({
 'name':_name.text,

@@ -14,7 +14,7 @@ class PatientForAdmin extends StatefulWidget {
 
 class _PatientForAdminState extends State<PatientForAdmin> {
     Future<List<Patient>>getPatient() async {
-    final String _url='http://192.168.171.189:8000/api/allpatient';
+    final String _url='http://192.168.209.189:8000/api/allpatient';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 List<Patient> users=[];
@@ -83,7 +83,7 @@ return users;
   
                       radius: 90,
   
-                  backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)
+                  backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)
 
                     ),
 

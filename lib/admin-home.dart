@@ -20,7 +20,7 @@ class AdminHome extends StatefulWidget {
 
 class _AdminHomeState extends State<AdminHome> {
    Future<List<Admin>>getAdmin() async {
-    final String _url='http://192.168.171.189:8000/api/getAdmin';
+    final String _url='http://192.168.209.189:8000/api/getAdmin';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 List<Admin> users=[];
@@ -33,7 +33,7 @@ print(users.toString());
 return users;
   }
   Future<List<Doctor>>getDoctors() async {
-    final String _url='http://192.168.171.189:8000/api/getdoctors';
+    final String _url='http://192.168.209.189:8000/api/getdoctors';
 var response=await http.get(Uri.parse(_url));
 var jsonDatae=jsonDecode(response.body);
 var m=jsonDatae.length;
@@ -106,7 +106,7 @@ return Container(
   
                radius: 90,
   
-               backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)),
+               backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)),
   
              ),
   
@@ -318,7 +318,7 @@ body: Container(
   
                       radius: 90,
   
-                  backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)
+                  backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)
 
                     ),
 

@@ -15,7 +15,7 @@ class EmergancyProfile extends StatefulWidget {
 
 class _EmergancyProfileState extends State<EmergancyProfile> {
   Future<List<Emergancy>>getEmergancy() async {
-    final String _url='http://192.168.171.189:8000/api/getEmergancy';
+    final String _url='http://192.168.209.189:8000/api/getEmergancy';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 print('................................');
@@ -65,7 +65,7 @@ return Container(
   
                radius: 90,
   
-               backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)),
+               backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)),
   
              ),
            

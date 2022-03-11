@@ -14,7 +14,7 @@ class RegistrarProfile extends StatefulWidget {
 
 class _RegistrarProfileState extends State<RegistrarProfile> {
   Future<List<Registrar>>getRegistrar() async {
-    final String _url='http://192.168.171.189:8000/api/getregistrar';
+    final String _url='http://192.168.209.189:8000/api/getregistrar';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 List<Registrar> users=[];
@@ -63,7 +63,7 @@ return Container(
   
                radius: 90,
   
-               backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)),
+               backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)),
   
              ),
            

@@ -162,7 +162,7 @@ class _EditPatientState extends State<EditPatient> {
     var patient_companion_phone_number=_patient_companion_phone_numbercontroller.text;
     //var diagnosis=_diagnosiscontroller.text;
     if(fullname.isNotEmpty && age.isNotEmpty && address.isNotEmpty && patient_phone_number.isNotEmpty && patient_companion_phone_number.isNotEmpty){
-var url='http://192.168.171.189:8000/api/updatepatient/$userId';
+var url='http://192.168.209.189:8000/api/updatepatient/$userId';
 var bodyData=json.encode({
 'name':fullname,
 'age':age,

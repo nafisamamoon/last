@@ -67,7 +67,7 @@ class _EditDioState extends State<EditDio> {
  editDiagnosis()async{
     var diagnosis=_diagnosiscontroller.text;
     if(diagnosis.isNotEmpty){
-var url='http://192.168.171.189:8000/api/updatedio/$userId';
+var url='http://192.168.209.189:8000/api/updatedio/$userId';
 var bodyData=json.encode({
 'diagnosis':diagnosis,
 });

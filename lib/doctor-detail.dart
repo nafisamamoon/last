@@ -35,7 +35,7 @@ class _DoctorDetailState extends State<DoctorDetail> {
         
                  radius: 90,
         
-                 backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+widget.path!)),
+                 backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+widget.path!)),
         
                ),
                    SizedBox(height: 15,),

@@ -12,7 +12,7 @@ PatientForSearch({this.id});
 
 class _PatientForSearchState extends State<PatientForSearch> {
   Future<List<Patient>>getOnePatient() async {
-    final String _url='http://192.168.171.189:8000/api/onepatient/${widget.id}';
+    final String _url='http://192.168.209.189:8000/api/onepatient/${widget.id}';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 List<Patient> users=[];
@@ -61,7 +61,7 @@ return Container(
   
                radius: 90,
   
-               backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)),
+               backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)),
   
              ),
            

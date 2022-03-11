@@ -103,7 +103,7 @@ class _EditPatientDoctorState extends State<EditPatientDoctor> {
     );
   }
   Future<http.StreamedResponse> editUser()async{
- var url='http://192.168.171.189:8000/api/edit-patient-by-doctor/$userId';
+ var url='http://192.168.209.189:8000/api/edit-patient-by-doctor/$userId';
  var request=http.MultipartRequest('POST',Uri.parse(url));
  request.fields.addAll({
 'diagnosis':_diagnosiscontroller.text,

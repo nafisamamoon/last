@@ -33,7 +33,7 @@ class _PatDetailState extends State<PatDetail> {
                 
                  radius: 90,
                 
-                 backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+widget.path!)),
+                 backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+widget.path!)),
                 
                            ),
              Column(

@@ -15,7 +15,7 @@ OnePatient({this.id});
 
 class _OnePatientState extends State<OnePatient> {
    Future<List<Patient>>getOnePatient() async {
-    final String _url='http://192.168.171.189:8000/api/onepatient/${widget.id}';
+    final String _url='http://192.168.209.189:8000/api/onepatient/${widget.id}';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 List<Patient> users=[];
@@ -64,7 +64,7 @@ return Container(
   
                radius: 90,
   
-               backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)),
+               backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)),
   
              ),
            
@@ -189,7 +189,7 @@ return Container(
                      ElevatedButton(
                     onPressed:()async{
                      
-     final String _url='http://192.168.171.189:8000/api/deletepatient/${snapshot.data[i].id}';
+     final String _url='http://192.168.209.189:8000/api/deletepatient/${snapshot.data[i].id}';
     http.Response response=await http.delete(Uri.parse(_url));
   
   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RegistrarHome()));

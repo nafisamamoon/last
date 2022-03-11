@@ -19,7 +19,7 @@ class _AddPatientState extends State<AddPatient> {
  List data=[];
   List<Doctor> users=[];
   Future getUser()async{
-    final String _url='http://192.168.171.189:8000/api/getdoctors';
+    final String _url='http://192.168.209.189:8000/api/getdoctors';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 
@@ -347,7 +347,7 @@ void takePhoto(ImageSource source)async{
 }
 
 Future<http.StreamedResponse> patchImage(String filepath)async{
- var url='http://192.168.171.189:8000/api/addpatient';
+ var url='http://192.168.209.189:8000/api/addpatient';
  var request=http.MultipartRequest('POST',Uri.parse(url));
  request.files.add(await http.MultipartFile.fromPath("path",filepath));
  request.fields.addAll({
@@ -368,7 +368,7 @@ return response;
 }
 Future<http.StreamedResponse> add()async{
   var g=AssetImage('images/doctor.jpg');
- var url='http://192.168.171.189:8000/api/addpatient';
+ var url='http://192.168.209.189:8000/api/addpatient';
  var request=http.MultipartRequest('POST',Uri.parse(url));
  request.files.add(await http.MultipartFile.fromPath("path",'1643707328.jpg'));
  request.fields.addAll({

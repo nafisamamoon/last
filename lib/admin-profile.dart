@@ -13,7 +13,7 @@ class AdminProfile extends StatefulWidget {
 
 class _AdminProfileState extends State<AdminProfile> {
 Future<List<Admin>>getAdmin() async {
-    final String _url='http://192.168.171.189:8000/api/getAdmin';
+    final String _url='http://192.168.209.189:8000/api/getAdmin';
 var response=await http.get(Uri.parse(_url));
 var jsonData=jsonDecode(response.body);
 List<Admin> users=[];
@@ -88,7 +88,7 @@ return Container(
   
                radius: 90,
   
-               backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data[i].path)),
+               backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)),
   
              ),
            

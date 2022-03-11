@@ -26,7 +26,7 @@ class _DoctorHomeState extends State<DoctorHome> {
   pref.setString(Key,ValueKey);
 }
 Future<Map>getDoctor() async {
-    final String _url='http://192.168.171.189:8000/api/doctorinfo/${widget.id}';
+    final String _url='http://192.168.209.189:8000/api/doctorinfo/${widget.id}';
 var response=await http.get(Uri.parse(_url));
 Map<String,dynamic> map=jsonDecode(response.body);
 //print('=========================');
@@ -110,7 +110,7 @@ if(snapshot.data ==null)
     
       
     
-                   backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+snapshot.data['path'])),
+                   backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data['path'])),
     
       
     
@@ -274,7 +274,7 @@ child: Column(
           child:  CircleAvatar(
                   radius: 90,
   
-               backgroundImage: CachedNetworkImageProvider('http://192.168.171.189:8000/uploads/'+'${widget.data[i]['path']}')
+               backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+'${widget.data[i]['path']}')
                   
                 ),
         ),

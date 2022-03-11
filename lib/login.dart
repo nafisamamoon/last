@@ -246,7 +246,7 @@ switch(id){
     final key='id';
     final ValueKey2=prefsS.getInt(key);
     print(ValueKey2);
-    final String _url='http://192.168.171.189:8000/api/mypatient/$ValueKey2';
+    final String _url='http://192.168.209.189:8000/api/mypatient/$ValueKey2';
     try{
        http.Response response=await http.get(Uri.parse(_url));
       if(response.statusCode == 200){

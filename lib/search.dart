@@ -20,7 +20,7 @@ class _searchState extends State<search> {
   Icon _searchIcon=new Icon(Icons.search);
   Widget _appbartitle=new Text('Search For Patient');
   void _getName()async{
-    var response=await http.get(Uri.parse('http://192.168.171.189:8000/api/allpatient'));
+    var response=await http.get(Uri.parse('http://192.168.209.189:8000/api/allpatient'));
     var i=jsonDecode(response.body);
     print('/////////////////////////////////');
     print(i);

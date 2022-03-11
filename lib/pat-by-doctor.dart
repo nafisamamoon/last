@@ -6,7 +6,7 @@ class PatByDoctor extends StatelessWidget {
   const PatByDoctor({ Key? key }) : super(key: key);
 Future<List<Patient>>getDoctors() async {
   int p=3;
-    final String _url='http://192.168.2.189:8000/api/pat-by-doctor/$p';
+    final String _url='http://192.168.209.189:8000/api/pat-by-doctor/$p';
 var response=await http.get(Uri.parse(_url));
 var jsonDatae=jsonDecode(response.body);
 print('///////////////////');
@@ -89,7 +89,7 @@ return doctors;
   
                       radius: 90,
   
-                  backgroundImage: CachedNetworkImageProvider('http://192.168.2.189:8000/uploads/'+snapshot.data[i].path)
+                  backgroundImage: CachedNetworkImageProvider('http://192.168.209.189:8000/uploads/'+snapshot.data[i].path)
 
                     ),
 
